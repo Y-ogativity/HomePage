@@ -6,7 +6,7 @@
     <title> Yohey Ogawa (小川 洋平) </title>
 
     <!-- 外部CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style_v2.css">
+    <link rel="stylesheet" href="style_v2.css?v=20260919-intro">
 
 </head>
 
@@ -30,28 +30,32 @@
         <ul>
             <div lang="ja">
                 <li><a href="#overview">小川洋平</a></li>
-                <li><a href="#current">現在の研究</a></li>
+                <li><a href="currentresearch.html?lang=ja">現在の研究</a></li>
                 <li><a href="research.html">これまでの研究成果</a></li>
-                <li><a href="futureresearch.html">将来の研究</a></li>
+                <li><a href="futureresearch.html?lang=ja">研究の中心仮説</a></li>
                 <li><a href="#publications">業績</a></li>
+                <li><a href="#books">書籍</a></li>
                 <li><a href="#career">経歴・職歴</a></li>
+                <li><a href="#awards">受賞</a></li>
                 <li><a href="#contact">連絡先</a></li>
             </div>
             <div lang="en">
                 <li><a href="#overview">Yohei Ogawa</a></li>
-                <li><a href="#current">Current Research</a></li>
+                <li><a href="currentresearch.html?lang=en">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
-                <li><a href="futureresearch.html?lang=en">Future Research as Independent Researcher</a></li>
+                <li><a href="futureresearch.html?lang=en">Central Research Hypothesis</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#books">Books</a></li>
                 <li><a href="#career">Career</a></li>
+                <li><a href="#awards">Awards</a></li>
                 <li><a href="#contact">Contact</a></li>
             </div>
         </ul>
-        <!-- 更新履歴のプレースホルダー -->
+        <!-- News -->
         <div class="update-history">
             <p style="text-indent: 0em;">------------------------</p>
-            <p lang="ja" style="text-indent: 0em;">更新履歴</p>
-            <p lang="en" style="display: none;text-indent: 0em;">Update History</p>
+            <p lang="ja" style="text-indent: 0em;">News</p>
+            <p lang="en" style="display: none;text-indent: 0em;">News</p>
             <ul id="update-list"></ul>
         </div>
     </nav>
@@ -67,23 +71,25 @@
                 </div>
                 <!--<p class="sub-title">生物科学研究者</p>-->
             </header>
-    
+            <p lang="ja" class="site-introduction">ゲノムの種間比較を通じて、遺伝子制御と細胞の多様性・進化を探る研究を紹介します。研究テーマや成果、中心仮説、論文などの業績をまとめています。</p>
+            <p lang="en" class="site-introduction" style="display: none;">This website introduces my research on gene regulation, cell diversity, and evolution through comparative genomics, along with current projects, findings, the central hypothesis, and publications.</p>
+
         </section>
 
         <section id="current">
             <div lang="ja">
                <h2>研究テーマ</h2>
                <ul>
-                    <li><b>トランスポゾンなどのリピート配列の同定とその種間比較 (工樂樹洋博士との共同研究)</b></li>
-                    <li><b>シングルセルATAC-seqデータを用いた視細胞タイプの種間比較解析 (Joseph Corbo博士との共同研究)</b></li>
+                    <li><b><a href="currentresearch.html?lang=ja#repeats">トランスポゾンなどのリピート配列の同定とその種間比較</a> (工樂樹洋博士との共同研究)</b></li>
+                    <li><b><a href="currentresearch.html?lang=ja#photoreceptors">シングルセルATAC-seqデータを用いた視細胞タイプの種間比較解析</a> (Joseph Corbo博士との共同研究)</b></li>
                 </ul>
 
             </div>
             <div lang="en">
                 <h2>Research Themes</h2>
                  <ul>
-                    <li><b>Interspecies comparison of interspersed repeats and simple repeats (in collaboration with Dr. Shigehiro Kuraku)</b></li>
-                    <li><b>Comparative analysis of photoreceptor cell types using single-cell ATAC-seq data (in collaboration with Dr. Joseph Corbo)</b></li>
+                    <li><b><a href="currentresearch.html?lang=en#repeats">Interspecies comparison of interspersed repeats and simple repeats</a> (in collaboration with Dr. Shigehiro Kuraku)</b></li>
+                    <li><b><a href="currentresearch.html?lang=en#photoreceptors">Comparative analysis of photoreceptor cell types using single-cell ATAC-seq data</a> (in collaboration with Dr. Joseph Corbo)</b></li>
                 </ul>
              </div>
         </section>
@@ -91,14 +97,12 @@
             <div lang="ja">
                <h2>これまでの研究成果</h2>
                <ul>
-                   <li><a href="research.html#atac">網膜神経細胞クラスそれぞれにおける転写因子モチーフの高い種間相同性</a></li>
                     <li><a href="research.html#zebrafish">ゼブラフィッシュ視細胞サブタイプのネットワークの同定</a></li>
                 </ul>
             </div>
             <div lang="en">
                <h2>Previous Research</h2>
                <ul>
-                   <li><a href="research.html?lang=en#atac">Deep interspecies conservation of transcription factor motifs in retinal cell classes</a></li>
                     <li><a href="research.html?lang=en#zebrafish">Identification of transcriptional network in zebrafish photoreceptors</a></li>
                 </ul>
             </div>
@@ -107,6 +111,11 @@
             <div lang="ja">
                 <h2>業績（抜粋）</h2>
                 <ol>
+                    <li style="margin-top: 10px;">
+                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
+                        <a href="https://doi.org/10.1101/gr.281149.125">Tracing genome size dynamics in sharks and rays with inclusive sequence analysis by the Squalomix Consortium.</a>
+                        <i><b>Genome Res.</b></i> 36, 1708–1723 (2026).
+                    </li>
                     <li style="margin-top: 10px;">
                         <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo, 
                         <a href="https://doi.org/10.1126/sciadv.adw7681"> Conservation of cis-regulatory codes over half a billion years of evolution. </a> 
@@ -158,6 +167,11 @@
                 <h2>Selected Publications</h2>
                 <ol>
                     <li style="margin-top: 10px;">
+                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
+                        <a href="https://doi.org/10.1101/gr.281149.125">Tracing genome size dynamics in sharks and rays with inclusive sequence analysis by the Squalomix Consortium.</a>
+                        <i><b>Genome Res.</b></i> 36, 1708–1723 (2026).
+                    </li>
+                    <li style="margin-top: 10px;">
                         <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo, 
                         <a href="https://doi.org/10.1126/sciadv.adw7681"> Conservation of cis-regulatory codes over half a billion years of evolution. </a> 
                         <b><i>Sci. Adv.</i></b> 11, eadw7681 (2025).
@@ -196,6 +210,33 @@
                         <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, D. Kojima, and Y. Fukada, 
                         <a href="https://doi.org/10.1098/rspb.2015.0659 ">Homeobox transcription factor Six7 governs expression of green opsin genes in zebrafish.</a>  
                         <i><b> Proc. R. Soc. B: Biol. </b></i> 282, 20150659 (2015).
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="books">
+            <div lang="ja">
+                <h2>書籍</h2>
+                <ol>
+                    <li style="margin-top: 10px;">
+                        <b>小川洋平</b>，
+                        <a href="https://www.yodosha.co.jp/jikkenigaku/articles/index.html?ci=636700">5億年の進化を経ても保たれる細胞型制御</a>．
+                        <b><i>実験医学</i></b> 44(8)，2026年5月号（羊土社）．連載「カレントトピックス」への寄稿．
+                        <p>脊椎動物6種の網膜を比較した研究を紹介しています。DNA配列が大きく変化しても、細胞の性質を支える遺伝子発現制御の仕組みが、5億年以上にわたってどのように保たれてきたのかを解説します。</p>
+                        <p><a href="https://www.yodosha.co.jp/jikkenigaku/book/9784758126038/">掲載号の詳細・目次（羊土社）</a></p>
+                    </li>
+                </ol>
+            </div>
+            <div lang="en">
+                <h2>Books</h2>
+                <ol>
+                    <li style="margin-top: 10px;">
+                        <b>Y. Ogawa</b>,
+                        <a href="https://www.yodosha.co.jp/jikkenigaku/articles/index.html?ci=636700">Conservation of cis-regulatory codes over half a billion years of evolution.</a>
+                        <b><i>Jikken Igaku</i></b> 44(8), May 2026 (Yodosha). Contributed article in “Current Topics” (in Japanese).
+                        <p>This commentary introduces our comparison of retinal cells across six vertebrate species. It explains how gene regulatory rules underlying cell identity have persisted for more than 500 million years despite extensive changes in DNA sequence.</p>
+                        <p><a href="https://www.yodosha.co.jp/jikkenigaku/book/9784758126038/">Issue details and contents (Yodosha, in Japanese)</a></p>
                     </li>
                 </ol>
             </div>
@@ -274,6 +315,33 @@
             </div>
         </section>
 
+        <section id="awards">
+            <div lang="ja">
+                <h2>受賞</h2>
+                <ul>
+                    <li>
+                        2026年8月 <b>第8回日本光生物学協会奨励賞</b>（日本光生物学協会）
+                    </li>
+                    <li style="margin-top: 0.5em;">
+                        2022年11月 <b>第31回吉田奨励賞</b>（日本比較生理生化学会）
+                    </li>
+                </ul>
+            </div>
+            <div lang="en">
+                <h2>Awards</h2>
+                <ul>
+                    <li>
+                        2026 Aug, <b>8th Young Scientist Award</b><br>
+                        Photobiology Association of Japan
+                    </li>
+                    <li style="margin-top: 0.5em;">
+                        2022 Nov, <b>31st Yoshida Prize for Young Researchers</b><br>
+                        The Japanese Society for Comparative Physiology and Biochemistry
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section id="contact">
             <div lang="ja">
                 <h2>連絡先</h2>
@@ -322,7 +390,8 @@
     </footer>
 
     <!-- java scriptの読み込み -->
-    <script src="script.js" defer></script>
+    <script src="update_Mishima.js?v=20260919-links" defer></script>
+    <script src="script.js?v=20260919-news" defer></script>
 
 </body>
 </html>

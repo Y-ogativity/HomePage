@@ -1,21 +1,15 @@
 // 言語切り替え用変数
 let currentLanguage = 'ja';
 
-// JSONファイルを読み込む関数
-async function loadUpdates() {
+// 通常のscriptタグで読み込んだNewsを表示（file://でも利用可能）
+function loadUpdates() {
     // 更新リストのないページでは何もしない
     if (!document.getElementById('update-list')) return;
-    try {
-        const response = await fetch('update_Mishima.json');
-        const data = await response.json();
-        renderUpdates(data.updates);
-    } catch (error) {
-        console.error("Failed to load updates:", error);
-    }
+    renderUpdates(newsData.updates);
 }
 
 
-// 更新履歴をレンダリングする関数
+// Newsをレンダリングする関数
 function renderUpdates(updates) {
     const updateList = document.getElementById('update-list');
     if (!updateList) return;
@@ -24,6 +18,22 @@ function renderUpdates(updates) {
     updates.forEach(update => {
         const listItem = document.createElement('li');
         listItem.textContent = `${update.date} - ${update[currentLanguage]}`;
+        const detailUrl = currentLanguage === 'en'
+            ? (update.urlEn || update.url)
+            : update.url;
+        if (typeof detailUrl === 'string' && detailUrl) {
+            try {
+                const url = new URL(detailUrl, document.baseURI);
+                if (url.protocol === 'https:' || url.protocol === 'http:') {
+                    const detailLink = document.createElement('a');
+                    detailLink.href = url.href;
+                    detailLink.textContent = currentLanguage === 'en' ? 'Details' : '詳細';
+                    listItem.append(' ', detailLink);
+                }
+            } catch (error) {
+                console.warn('Invalid News detail URL:', detailUrl);
+            }
+        }
         updateList.appendChild(listItem);
     });
 }
@@ -33,7 +43,7 @@ function switchLanguage(lang) {
     
     // ページ全体の言語を更新 (メタ情報として適切)
     document.documentElement.lang = lang;
-    // for update history
+    // for News
     currentLanguage = lang;
     // persist selection so other pages open in the same language
     try {

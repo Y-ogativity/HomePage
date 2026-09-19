@@ -102,6 +102,17 @@ body {
 h2 {
     margin-top: 40px;
 }
+
+#books {
+    scroll-margin-top: 5rem;
+}
+
+#books p {
+    text-indent: 0;
+    margin-top: 0.5em;
+    line-height: 1.7;
+}
+
 p {
     margin-top: 5px;
     margin-bottom: 0px;
@@ -114,6 +125,12 @@ p {
     align-items: center;
     gap: 30px; /* 画像とタイトルの間隔 */
     padding: 20px;
+}
+
+.site-introduction {
+    margin: 1rem 0 0;
+    text-indent: 0;
+    line-height: 1.7;
 }
 
 /* プロフィール画像 */
@@ -192,6 +209,15 @@ p {
     font-size: 0.9em;
     color: #cccccc;
     margin-bottom: 8px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.update-history ul li a {
+    color: #ffffff;
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 
@@ -208,6 +234,186 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
+}
+
+/* 研究ページ: 左に文章、右に図を配置 */
+.current-research-page main,
+.previous-research-page main,
+.hypothesis-page main {
+    min-width: 0;
+    min-height: 0;
+    overflow-wrap: break-word;
+}
+
+.current-research-page p,
+.previous-research-page p,
+.hypothesis-page p {
+    text-indent: 0;
+}
+
+.current-research-header {
+    margin-bottom: 2.5rem;
+}
+
+.current-research-header h1 {
+    margin-bottom: 0.6rem;
+}
+
+.current-research-header p {
+    line-height: 1.7;
+}
+
+.hypothesis-header .research-mission {
+    margin: 1.5rem 0 2rem;
+    padding: 1rem;
+    border: 1px solid #35495e;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.research-ideas {
+    padding-left: 1.5rem;
+}
+
+.research-ideas > li + li {
+    margin-top: 2rem;
+}
+
+.research-ideas h3 {
+    margin: 0 0 0.75rem;
+    line-height: 1.5;
+}
+
+.research-topic {
+    padding: 2rem 0;
+    border-top: 1px solid #d6dde3;
+    scroll-margin-top: 5rem;
+}
+
+.research-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(1.25rem, 3vw, 3rem);
+    align-items: start;
+}
+
+.research-copy h2 {
+    margin: 0 0 0.65rem;
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+.research-copy p {
+    margin: 0 0 1rem;
+    line-height: 1.8;
+}
+
+.research-copy .research-collaboration {
+    color: #526271;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.research-figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.current-research-page .research-figure {
+    width: 50%;
+    justify-self: center;
+}
+
+.previous-research-page .research-diagram {
+    width: 70%;
+    justify-self: center;
+}
+
+.research-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.research-figure figcaption {
+    margin-top: 0.75rem;
+    color: #526271;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.research-reference {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.previous-research-title {
+    margin: 2rem 0 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.research-result-row {
+    margin: 2rem 0;
+}
+
+.research-result-row .research-copy h3 {
+    margin-top: 0;
+}
+
+.research-media-stack {
+    display: grid;
+    gap: 2rem;
+    min-width: 0;
+}
+
+.research-figure video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.research-figure figcaption p + p {
+    margin-top: 0.5rem;
+}
+
+.research-notes {
+    margin-top: 2rem;
+}
+
+.research-media-reports {
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .research-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .research-topic {
+        padding: 1.5rem 0;
+        scroll-margin-top: 1rem;
+    }
+
+    #books {
+        scroll-margin-top: 1rem;
+    }
+
+    .current-research-page main,
+    .previous-research-page main,
+    .hypothesis-page main {
+        box-sizing: border-box;
+        padding-bottom: 5rem;
+    }
+
+    .current-research-page footer p,
+    .previous-research-page footer p,
+    .hypothesis-page footer p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
 }
 
 /* フッター */

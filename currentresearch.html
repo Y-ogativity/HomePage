@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Research (現在の研究) | Yohey Ogawa</title>
+    <link rel="stylesheet" href="style_v2.css">
+</head>
+<body class="current-research-page">
+    <div class="language-switch">
+        <a href="#" onclick="switchLanguage('ja')">日本語</a>
+        <a href="#" onclick="switchLanguage('en')">English</a>
+        <div class="mobile-header">
+            <div lang="ja">
+                <a href="#" onclick="toggleNav()">目次</a>
+            </div>
+            <div lang="en" style="display: none;">
+                <a href="#" onclick="toggleNav()">Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <div lang="ja">
+                <li><a href="index.html?lang=ja#overview">小川洋平</a></li>
+                <li><a href="currentresearch.html?lang=ja" aria-current="page">現在の研究</a></li>
+                <li><a href="research.html?lang=ja">これまでの研究成果</a></li>
+                <li><a href="futureresearch.html?lang=ja">研究の中心仮説</a></li>
+                <li><a href="index.html?lang=ja#publications">業績</a></li>
+                <li><a href="index.html?lang=ja#books">書籍</a></li>
+                <li><a href="index.html?lang=ja#career">経歴・職歴</a></li>
+                <li><a href="index.html?lang=ja#awards">受賞</a></li>
+                <li><a href="index.html?lang=ja#contact">連絡先</a></li>
+            </div>
+            <div lang="en" style="display: none;">
+                <li><a href="index.html?lang=en#overview">Yohei Ogawa</a></li>
+                <li><a href="currentresearch.html?lang=en" aria-current="page">Current Research</a></li>
+                <li><a href="research.html?lang=en">Previous Research</a></li>
+                <li><a href="futureresearch.html?lang=en">Central Research Hypothesis</a></li>
+                <li><a href="index.html?lang=en#publications">Publications</a></li>
+                <li><a href="index.html?lang=en#books">Books</a></li>
+                <li><a href="index.html?lang=en#career">Career</a></li>
+                <li><a href="index.html?lang=en#awards">Awards</a></li>
+                <li><a href="index.html?lang=en#contact">Contact</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="current-research-header">
+            <div lang="ja">
+                <h1>現在の研究</h1>
+                <p>ゲノム配列の多様性と、細胞の個性を生み出す遺伝子制御の仕組みを調べています。</p>
+            </div>
+            <div lang="en" style="display: none;">
+                <h1>Current Research</h1>
+                <p>Exploring genome sequence diversity and the gene regulatory mechanisms that shape cell identity.</p>
+            </div>
+        </header>
+
+        <section id="repeats" class="research-topic">
+            <div lang="ja" class="research-layout">
+                <div class="research-copy">
+                    <h2>ゲノムの繰り返し配列を正確に読み解く</h2>
+                    <p class="research-collaboration">工樂樹洋博士との共同研究</p>
+                    <p>ゲノムには、移動やコピーの増加を通じて広がるトランスポゾンや、同じ配列が連続するタンデムリピートが数多く含まれます。こうした「繰り返し配列」は、量や種類が生物種によって大きく異なり、ゲノムの構造と進化を理解する手がかりになります。</p>
+                    <p>短寿命の魚ターコイズキリフィッシュを中心に、高品質なゲノム配列を用いて、複数のリピート検出・分類手法を比較しています。トランスポゾンとタンデムリピートを一体として評価し、手法の選び方が検出される領域や種間比較の結果にどう影響するかを調べています。</p>
+                    <p>さらに、トランスポゾン由来の配列がどの組織で発現し、加齢や性差とどう関係するのかを、ゲノム上の個々の場所（座位）ごとに解析しています。配列を正確に捉えることを出発点に、繰り返し配列の生物学的な意味を明らかにすることを目指しています。</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/Repeat.png" width="2152" height="2479" alt="複数の魚類ゲノムで、タンデムリピートの検出とトランスポゾンの同定・分類を組み合わせ、繰り返し配列の全体像を比較する解析の概念図。">
+                    <figcaption>トランスポゾンとタンデムリピートを統合して評価する解析の流れ。</figcaption>
+                </figure>
+            </div>
+            <div lang="en" class="research-layout" style="display: none;">
+                <div class="research-copy">
+                    <h2>Decoding repetitive sequences in genomes</h2>
+                    <p class="research-collaboration">In collaboration with Dr. Shigehiro Kuraku</p>
+                    <p>Genomes contain many repetitive sequences, including transposable elements that can move or increase in copy number and tandem repeats made of adjacent copies of a sequence. Their abundance and composition vary widely among species, offering clues to genome structure and evolution.</p>
+                    <p>Using high-quality genome assemblies, with a focus on the short-lived African turquoise killifish, we compare methods for repeat detection and classification. By evaluating transposable elements and tandem repeats together, we examine how the choice of methods affects the regions we identify and the conclusions of cross-species comparisons.</p>
+                    <p>We also analyze expression at individual transposable element loci across tissues to investigate associations with age and sex. Accurate repeat annotation provides the foundation for understanding the biological significance of these sequences.</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/Repeat.png" width="2152" height="2479" alt="Workflow comparing repeat detection tools across fish genomes by combining tandem repeat detection with transposable element identification and classification.">
+                    <figcaption>An integrated workflow for evaluating transposable elements and tandem repeats.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="photoreceptors" class="research-topic">
+            <div lang="ja" class="research-layout">
+                <div class="research-copy">
+                    <h2>視細胞の遺伝子制御を種間で比較する</h2>
+                    <p class="research-collaboration">Joseph C. Corbo博士との共同研究</p>
+                    <p>進化の過程でDNA配列が大きく変わっても、似た働きをもつ細胞はどのように維持されるのでしょうか。2025年の研究では、ヤツメウナギからヒトまで6種の網膜を比較し、6つの主要な細胞クラスのそれぞれで、遺伝子の働きを調節する「シス制御コード」が5億年以上にわたり種間で保存されていることを示しました。</p>
+                    <p>鍵となるのは、転写因子が認識する短いDNA配列（モチーフ）の組み合わせです。個々の制御領域の配列が変化しても、細胞クラスに特徴的なモチーフの組み合わせには種を超えた共通性があります。シングルセルATAC-seqと配列解析を用い、DNA配列を直接対応づけるだけでは見えない共通の制御の仕組みを調べています。</p>
+                    <p>現在は、網膜の細胞クラスに加えて、光を受け取る視細胞のタイプごとの比較へと研究を広げています。種間で共通する制御の仕組みとタイプごとの違いを調べ、視細胞の多様性がどのように進化したのかを探っています。</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/Cross-species.png" width="3411" height="4127" loading="lazy" alt="転写因子結合モチーフと細胞ごとのクロマチン情報からモデルを作り、異なる脊椎動物の網膜細胞間でシス制御コードを比較する概念図。">
+                    <figcaption>配列モチーフに着目し、異なる種の細胞に共通する制御コードを比較。</figcaption>
+                </figure>
+            </div>
+            <div lang="en" class="research-layout" style="display: none;">
+                <div class="research-copy">
+                    <h2>Comparing gene regulation across photoreceptor types</h2>
+                    <p class="research-collaboration">In collaboration with Dr. Joseph C. Corbo</p>
+                    <p>How do cells retain similar functions as their DNA sequences change during evolution? In our 2025 study, we compared retinas from six species, from lamprey to human, and showed that the cis-regulatory codes of all six major retinal cell classes have been conserved across species for more than 500 million years.</p>
+                    <p>A key feature is the combination of short DNA motifs recognized by transcription factors. Although individual regulatory regions have changed extensively, cell-class-specific motif combinations remain similar across species. Using single-cell ATAC-seq and sequence analysis, we investigate shared regulatory mechanisms that are not apparent from direct DNA sequence alignment alone.</p>
+                    <p>We are now extending these comparisons beyond retinal cell classes to individual photoreceptor types. By examining shared regulatory features and differences among types across species, we aim to understand how photoreceptor diversity evolved.</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/Cross-species.png" width="3411" height="4127" loading="lazy" alt="Transcription factor binding motifs and cell-specific chromatin profiles are used to model and compare cis-regulatory codes across vertebrate retinal cells.">
+                    <figcaption>Comparing regulatory codes across species through shared DNA sequence motifs.</figcaption>
+                </figure>
+            </div>
+            <div class="research-reference">
+                <p lang="ja"><b>関連論文</b></p>
+                <p lang="en" style="display: none;"><b>Related publication</b></p>
+                <p><span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo,
+                    <a href="https://doi.org/10.1126/sciadv.adw7681">Conservation of cis-regulatory codes over half a billion years of evolution.</a>
+                    <b><i>Sci. Adv.</i></b> 11, eadw7681 (2025).
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 小川 洋平 Yohei Ogawa All Rights Reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

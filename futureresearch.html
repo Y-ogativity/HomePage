@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research (研究成果)</title>
+    <title>Central Research Hypothesis (研究の中心仮説) | Yohey Ogawa</title>
 
     <!-- 外部CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style_v2.css">
+    <link rel="stylesheet" href="style_v2.css?v=20260919-hypothesis">
 
 </head>
 
-<body>
+<body class="hypothesis-page">
 
     <div class="language-switch">
         <a href="#" onclick="switchLanguage('ja')">日本語</a>
@@ -30,85 +30,119 @@
         <ul>
             <div lang="ja">
                 <li><a href="index.html#overview">小川洋平</a></li>
-                <li><a href="index.html#current">現在の研究</a></li>
+                <li><a href="currentresearch.html?lang=ja">現在の研究</a></li>
                 <li><a href="research.html">これまでの研究成果</a></li>
-                <li><a href="futureresearch.html">将来の研究</a></li>
+                <li><a href="futureresearch.html?lang=ja" aria-current="page">研究の中心仮説</a></li>
                 <li><a href="index.html#publications">業績</a></li>
+                <li><a href="index.html?lang=ja#books">書籍</a></li>
                 <li><a href="index.html#career">経歴・職歴</a></li>
+                <li><a href="index.html#awards">受賞</a></li>
                 <li><a href="index.html#contact">連絡先</a></li>
             </div>
             <div lang="en">
                 <li><a href="index.html?lang=en#overview">Yohei Ogawa</a></li>
-                <li><a href="index.html?lang=en#current">Current Research</a></li>
+                <li><a href="currentresearch.html?lang=en">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
-                <li><a href="futureresearch.html?lang=en">Future Research as Independent Researcher</a></li>
+                <li><a href="futureresearch.html?lang=en" aria-current="page">Central Research Hypothesis</a></li>
                 <li><a href="index.html?lang=en#publications">Publications</a></li>
+                <li><a href="index.html?lang=en#books">Books</a></li>
                 <li><a href="index.html?lang=en#career">Career</a></li>
+                <li><a href="index.html?lang=en#awards">Awards</a></li>
                 <li><a href="index.html?lang=en#contact">Contact</a></li>
             </div>
         </ul>
     </nav>
 
     <main>
-        <div lang="ja">
-            <h1>将来の研究</h1>
-        </div>
-        <div lang="en">
-            <h1>Future research as independent researcher</h1>
-        </div>
-
-
-        <section id="atac">
-
+        <header class="hypothesis-header">
             <div lang="ja">
-
-                <h2 style="display: inline-block; margin-right: 20px;">研究目標</h2>
-                <p style="display: inline-block;font-size:x-large; margin-top: 2em; margin-bottom: 2em;"><strong style="border: 1px solid; padding: 5px;">ゲノムの非コード領域に着目した生物種間比較を行い、細胞の進化的変遷や起源を解明する</strong></p>
-                <p>ヒトゲノムのうち遺伝子をコードする領域はたったの数％です。また、ヒトの遺伝子数は多くても３万遺伝子ほどしかありません。これらの遺伝子を使って、例えばヒトの脳においては、約９００億個の神経細胞が作られ、神経細胞は数百～数千種類のサブタイプを構成します。このように多様な細胞を形成するためには、それぞれの遺伝子が適切なタイミングかつ特定の場所にて使用（遺伝子発現）される必要があります。個々の遺伝子の発現は、ヒトにおいては約３千の転写関連因子が織りなす転写調節システムにより制御されます。また他の動物においても、体の構造が単純か複雑かに関わらず、遺伝子の数は大まかに数万程度で、桁が同じです。つまり転写ネットワークの複雑化により、それぞれの生物にユニークな形質が生み出されます。進化の過程では、それぞれの遺伝子が機能を失ったり獲得したりするとともに、遺伝子の転写調節領域、つまりゲノムの非コード領域が変化していると分かってきました。それぞれの生物の進化過程で転写ネットワークがどのように変化するか、その多様性と共通性の詳細の解明はまだ始まったばかりです。</p>
-                <p>私はなかでも特に、多岐に及ぶ脊椎動物において、細胞のユニークな機能やアイデンティティを規定する転写システムの解析を志しています。さらに種間比較を行ない、転写システムの進化的変遷や起源の解明を目指しています。また将来的には、遺伝子工学を用いてヒトの細胞に新たな遺伝子発現調節モジュールを付与することにより、生物工学的アプローチも試みます。</p>
-                <h2>中心仮説</h2>
-                <h3><strong style="padding: 5px;">転写システムは転写調節因子のDNA結合パターンとして表現できる</strong></h3>
-                <p>真核生物の転写調節因子は、ゲノム中に存在する約10塩基ほどの特定の配列パターンを認識して結合します。その認識配列には柔軟性があり、認識配列パターンの総称は転写因子結合モチーフ（例えばホメオドメインモチーフ）と呼ばれます。複数の転写因子が転写因子モチーフを介してDNA近傍に集まることで、機能的な遺伝子調節領域（シス調節領域）を形成します。
-                    シス調節領域により個々の遺伝子の転写が促進または抑制され、結果として細胞のアイデンティティや細胞機能が備わります。このような転写因子の結合配列の機能的な組み合わせを、私たちはシス調節コードと呼んでいます。
-                    </p>
-                <p>シス調節コードは、転写因子の組み合わせによって規定されるため、必ずしも塩基配列の保存性に依存しません。そのため、中立進化によって塩基配列が広範に変化した遠縁な生物間であっても比較が可能であると期待できます。
-                    私は、このシス調節コードの種間における保存性を探索し、塩基配列の保存性に依存しない、数億年以上の長い進化的時間スケールにわたる細胞のアイデンティティや機能の比較を目指します。</p>
-            
-                <h3>将来の研究アイデア</h3>
-                <ul>
-                    <li><b>ゲノム配列から特定の細胞タイプを予測する</b></li>
-                    <p>さまざまな生物の膨大なゲノム配列が蓄積されつつあり、ゲノム情報を用いてそれぞれの動物独自の形質を生み出す仕組みが明らかにされています。網膜においては、それぞれの動物が特定の細胞タイプを備え、おのおのの光環境へ適応していると考えられています。それぞれの細胞タイプの増減の進化的変遷に着目することで、細胞の進化を支えるメカニズムの解明が期待できます。そのためには、なるべく多くの細胞タイプを幅広い生物において明らかにする必要があります。しかしながら、すべての動物において、大規模な組織サンプリングを行ない、細胞タイプをすべて明らかにするのは時間やコストの観点から現実的ではありません。そこで私は、特定の細胞が種に存在するのかを、ゲノム配列から判定するプロセスを構築します。具体的には、脊椎動物の視細胞サブタイプを対象とし、異なった視細胞サブタイプのレパートリーをもつ生物のゲノム配列を用いて視細胞種類の予測を試みます。</p>
-                    <p>核となるアイデアは、幅広い生物種から取得されたクロマチンアクセッシビリティをもとに、DNA配列からオープンクロマチン領域を予測するモデルです。これまでに取得した合計８種類の脊椎動物それぞれにおけるATAC-seqデータを用いて、それぞれの生物において予測モデルを樹立します。さらに、これらのモデルを統合して、生物種によらない細胞種の特徴を学習したユニバーサルモデルをつくります。ユニバーサルモデルによって予測されたクロマチンプロファイルをもとに細胞種である確率を算出し、調べた生物に特定の細胞タイプがあるかを調べます。</p>
-                    <li><b>眼の相同性の探求</b></li>
-                    <p>幅広い分類群にわたる動物は、外界の光を活用するため、眼球を持ちます。これら器官は、「光を受容する」や「光刺激を脳へ投射する」といった機能が相同です。興味深いことに、マウスのPAX6は眼球発生をハエの脚に誘導でき、つまり哺乳類とハエの転写制御因子PAX6はともに分子的に相互交換可能です。進化の過程で１度だけ眼球をつくる仕組みが生まれたと想定されています。しかしながら、遠縁な動物では、眼球の発生や、神経の種類はそれぞれ全く異なり、発現する遺伝子の類似性も乏しい。そこで、これまでに私が開発した細胞クラス比較法を、脊椎動物から無脊椎動物へと拡大して適応します。具体的にはシングルセルATAC-seqを、ホヤやハエなどの進化的に重要な位置を占める無脊椎動物において行い、転写因子モチーフの組み合わせを比べ、眼球の起源に迫りたい。またさらには、脊椎動物の網膜細胞クラスそれぞれに備わる転写因子モチーフの組み合わせの進化起源も合わせて同定されると期待できる。</p>
-                    <li><b>遺伝子転写を誘導する転写因子モチーフの組み合わせ</b></li>
-                    <p>私たちのこれまでの研究により、それぞれの細胞クラスにおいては、転写因子モチーフの組み合わせが種を超えて広く保存されていることが分かりました（<a href="research.html#atac">研究成果</a>）。その一方で、１つの機能的なシス領域を構成する、転写モチーフの組み合わせは分かっていません。そこで、ゼブラフィッシュ、アフリカツメガエル、ニワトリ、ネズミ、ヒトのオルガノイドなど、遺伝子導入系が確立されている生物においてスループットの高いレポーターアッセイをそれぞれの生物において行います。これにより、遺伝子転写と連関し、かつ進化的に保存された転写因子モチーフの組み合わせを見出します。</p>
-                </ul>
+                <h1>研究の中心仮説</h1>
+                <p class="research-mission"><strong>ゲノムの非コード領域に着目した生物種間比較を行い、配列の相同性に依存しない高次システムの進化的変遷や起源を解明する</strong></p>
             </div>
-
             <div lang="en" style="display: none;">
-                <h2 style="display: inline-block; margin-right: 20px;">Research Goals</h2>
-                <p style="display: inline-block;font-size:large; margin-top: 2em; margin-bottom: 2em;"><strong style="border: 1px solid; padding: 5px;">Comparing gene transcription systems across species to elucidate the evolutionary transitions and origins of cells</strong></p>
-                <p>Only a few percent of the human genome contains genes, and there are about 30,000 of them at most. Using genes in the human brain, for example, about 90 billion neurons are created, and neurons form hundreds to thousands of subtypes. To form such diverse cells, each gene must be used (expressed) at the right time and in the right place. The expression of individual genes is controlled by a system of about 3,000 factors in humans and mice. In animals, the number of genes is roughly tens of thousands, regardless of whether their body structure is simple or complex. In other words, the complexity of the transcription network creates the unique traits of each organism. It has been found that during evolution, the transcriptional control mechanisms change as genes lose or gain functions. We are just beginning to understand how these networks change during evolution.</p>
-                <p>I am particularly interested in studying the transcription systems that define the unique functions and identities of cells in non-mammalian vertebrates. Furthermore, I aim to understand how these systems have evolved and where they came from by comparing them across different species, including mammals, which is a common practice in research. In the future, I hope to contribute to medicine by using genetic engineering to add new functions to human cells.</p>
-                <h2>Central Hypothesis</h2>
-                <h3><strong style="padding: 5px;">The transcription system can be represented as patterns of transcription factor binding</strong></h3>
-                <p>Eukaryotic transcription factors are capable of recognizing and binding to specific nucleotide sequences in the genome. These recognition sequences exhibit flexibility, and the general term for recognition sequence patterns is transcription factor binding motifs (e.g., homeodomain motifs). Multiple transcription factors gather near DNA through transcription factor motifs to form functional gene regulatory regions (cis-regulatory regions). These cis-regulatory regions promote or inhibit the transcription of individual genes, resulting in cell identity and function. The term "cis-regulatory codes" is employed to denote the functional combinations of transcription factor binding sequences. The objective of my study is to make comparisons of cis-regulatory codes across species, with the aim of conducting interspecies comparisons of cell identity and function over extended periods of time (hundreds of millions of years) that are not contingent upon the conservation of nucleotide sequences.</p>
-            
-            <h3>Future Research Ideas</h3>
-                 <ul>
-                    <li>Predicting specific cell types from genome sequences</li>
-                    <p>There is a lot of data about genomes from different organisms. This data helps us understand how animals' traits are formed. It seems that each animal has certain cell types in its retina. These cell types help each animal adapt to its own light environment. By studying how cell types change over time, we can learn more about how cells evolve. To do this, we need to identify as many cell types as possible in many different organisms. But it would take too long and cost too much to collect samples from all animals and identify all their cell types. So, I will build a process to determine whether a specific cell exists in a species based on its genome sequence. Specifically, I will target photoreceptor subtypes in vertebrates and try to predict photoreceptor types using the genome sequences of organisms with different photoreceptor subtypes.</p>
-                    <p>The main idea is to predict open chromatin regions from DNA sequences based on data about chromatin accessibility from many different species. We will create a prediction model for each species using ATAC-seq data from a total of eight different vertebrate species. We will also combine these models to create a universal model that has learned the characteristics of cell types that are not dependent on the species. We will calculate the probability of a cell type based on the chromatin profile predicted by the universal model. Then, we will investigate whether there are specific cell types in the organisms we have studied.</p>
-                    <li>Exploration of eye homology</li>
-                    <p>Animals across a wide range of taxa possess eyes to utilize external light, and these organs exhibit homologous functions, such as "receiving light" and "projecting light stimuli to the brain."Notably, mouse transcriptional regulator PAX6 has been observed to induce eye development in the legs of flies, suggesting that PAX6 in mouse and flies are molecularly interchangeable.Consequently, a hypothesis has been postulated that the mechanism underlying eye development emerged on a singular occasion during the course of evolution. However, in distantly related animals, the process of eye development and the types of neurons are completely different, and the sequence similarity of expressed genes is low.In light of these findings, the present study aims to apply the cell class comparison method initially developed in vertebrates to invertebrates.Specifically, the study will entail the implementation of single-cell ATAC-seq of eyes in invertebrates, which occupy a substantial evolutionary niche, including tunicates and flies. This approach will facilitate a comparative analysis of transcription systems, encompassing the examination of combinations of transcription factor motifs.This approach will facilitate the investigation of the evolution of eyes.Furthermore, it is anticipated that the evolutionary origins of the combinations of transcription factor motifs present in each retinal cell class of vertebrates will be identified.</p>
-                    <li>Combinations of transcription factor motifs that induce gene transcription</li>
-                    <p>Our previous research has shown that combinations of transcription factor motifs are widely conserved across species in each cell class (<a href="research.html#atac">Research Results</a>). However, the combinations of transcription motifs that constitute a single functional cis-regulatory region are not yet known. Therefore, we will conduct high-throughput reporter assays in organisms with established gene introduction systems, such as zebrafish, African clawed frog, chicken, mouse, and human organoids. This will allow us to identify combinations of transcription factor motifs that are associated with gene transcription and evolutionarily conserved.</p>
-                 </ul>
+                <h1>Central Research Hypothesis</h1>
+                <p class="research-mission"><strong>Compare noncoding genomic regions across species to uncover the evolutionary transitions and origins of higher-order biological systems without relying on sequence homology.</strong></p>
             </div>
+        </header>
 
+        <section id="atac" class="research-topic">
+            <div lang="ja" class="research-layout">
+                <div class="research-copy">
+                    <h2>転写システムは転写調節因子のDNA結合パターンとして表現できる</h2>
+                    <p>真核生物の転写調節因子は、ゲノム中に存在する約10塩基ほどの特定の配列パターンを認識して結合します。その認識配列には柔軟性があり、認識配列パターンの総称は転写因子結合モチーフ（例えばホメオドメインモチーフ）と呼ばれます。複数の転写因子が転写因子モチーフを介してDNA近傍に集まることで、機能的な遺伝子調節領域（シス調節領域）を形成します。
+                                        シス調節領域により個々の遺伝子の転写が促進または抑制され、結果として細胞のアイデンティティや細胞機能が備わります。このような転写因子の結合配列の機能的な組み合わせを、私たちはシス調節コードと呼んでいます。
+                                        </p>
+                    <p>シス調節コードは、転写因子の組み合わせによって規定されるため、必ずしも塩基配列の保存性に依存しません。そのため、中立進化によって塩基配列が広範に変化した遠縁な生物間であっても比較が可能であると期待できます。
+                                        私は、このシス調節コードの種間における保存性を探索し、塩基配列の保存性に依存しない、数億年以上の長い進化的時間スケールにわたる細胞のアイデンティティや機能の比較を目指します。</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/AIR.png" width="2050" height="1010" alt="魚類とヒトの模式図を用いて、DNA配列のアラインメントに依存しない遺伝子制御の相同性を示す概念図。">
+                    <figcaption>配列アラインメントに依存しない遺伝子制御の相同性（Alignment-independent regulatory homology）という仮説。</figcaption>
+                </figure>
+            </div>
+            <div lang="en" class="research-layout" style="display: none;">
+                <div class="research-copy">
+                    <h2>Transcriptional systems can be represented as patterns of transcription factor binding to DNA</h2>
+                    <p>Eukaryotic transcription factors are capable of recognizing and binding to specific nucleotide sequences in the genome. These recognition sequences exhibit flexibility, and the general term for recognition sequence patterns is transcription factor binding motifs (e.g., homeodomain motifs). Multiple transcription factors gather near DNA through transcription factor motifs to form functional gene regulatory regions (cis-regulatory regions). These cis-regulatory regions promote or inhibit the transcription of individual genes, resulting in cell identity and function. The term "cis-regulatory codes" is employed to denote the functional combinations of transcription factor binding sequences. The objective of my study is to make comparisons of cis-regulatory codes across species, with the aim of conducting interspecies comparisons of cell identity and function over extended periods of time (hundreds of millions of years) that are not contingent upon the conservation of nucleotide sequences.</p>
+                </div>
+                <figure class="research-figure">
+                    <img src="media_file/figures/AIR.png" width="2050" height="1010" alt="Diagram comparing fish and human genomes to illustrate regulatory homology independent of DNA sequence alignment.">
+                    <figcaption>The hypothesis of alignment-independent regulatory homology.</figcaption>
+                </figure>
+            </div>
         </section>
 
+        <section id="research-goals" class="research-topic">
+            <div lang="ja" class="research-copy">
+                <h2>研究目標</h2>
+                <p>ヒトゲノムのうち遺伝子をコードする領域はたったの数％です。また、ヒトの遺伝子数は多くても３万遺伝子ほどしかありません。これらの遺伝子を使って、例えばヒトの脳においては、約９００億個の神経細胞が作られ、神経細胞は数百～数千種類のサブタイプを構成します。このように多様な細胞を形成するためには、それぞれの遺伝子が適切なタイミングかつ特定の場所にて使用（遺伝子発現）される必要があります。個々の遺伝子の発現は、ヒトにおいては約３千の転写関連因子が織りなす転写調節システムにより制御されます。また他の動物においても、体の構造が単純か複雑かに関わらず、遺伝子の数は大まかに数万程度で、桁が同じです。つまり転写ネットワークの複雑化により、それぞれの生物にユニークな形質が生み出されます。進化の過程では、それぞれの遺伝子が機能を失ったり獲得したりするとともに、遺伝子の転写調節領域、つまりゲノムの非コード領域が変化していると分かってきました。それぞれの生物の進化過程で転写ネットワークがどのように変化するか、その多様性と共通性の詳細の解明はまだ始まったばかりです。</p>
+                <p>私はなかでも特に、多岐に及ぶ脊椎動物において、細胞のユニークな機能やアイデンティティを規定する転写システムの解析を志しています。さらに種間比較を行ない、転写システムの進化的変遷や起源の解明を目指しています。また将来的には、遺伝子工学を用いてヒトの細胞に新たな遺伝子発現調節モジュールを付与することにより、生物工学的アプローチも試みます。</p>
+            </div>
+            <div lang="en" class="research-copy" style="display: none;">
+                <h2>Research Goals</h2>
+                <p>Only a few percent of the human genome contains genes, and there are about 30,000 of them at most. Using genes in the human brain, for example, about 90 billion neurons are created, and neurons form hundreds to thousands of subtypes. To form such diverse cells, each gene must be used (expressed) at the right time and in the right place. The expression of individual genes is controlled by a system of about 3,000 factors in humans and mice. In animals, the number of genes is roughly tens of thousands, regardless of whether their body structure is simple or complex. In other words, the complexity of the transcription network creates the unique traits of each organism. It has been found that during evolution, the transcriptional control mechanisms change as genes lose or gain functions. We are just beginning to understand how these networks change during evolution.</p>
+                <p>I am particularly interested in studying the transcription systems that define the unique functions and identities of cells in non-mammalian vertebrates. Furthermore, I aim to understand how these systems have evolved and where they came from by comparing them across different species, including mammals, which is a common practice in research. In the future, I hope to contribute to medicine by using genetic engineering to add new functions to human cells.</p>
+            </div>
+        </section>
+
+        <section id="research-ideas" class="research-topic">
+            <div lang="ja" class="research-copy">
+                <h2>研究アイデア</h2>
+                <ul class="research-ideas">
+                    <li>
+                        <h3>ゲノム配列から特定の細胞タイプを予測する</h3>
+                        <p>さまざまな生物の膨大なゲノム配列が蓄積されつつあり、ゲノム情報を用いてそれぞれの動物独自の形質を生み出す仕組みが明らかにされています。網膜においては、それぞれの動物が特定の細胞タイプを備え、おのおのの光環境へ適応していると考えられています。それぞれの細胞タイプの増減の進化的変遷に着目することで、細胞の進化を支えるメカニズムの解明が期待できます。そのためには、なるべく多くの細胞タイプを幅広い生物において明らかにする必要があります。しかしながら、すべての動物において、大規模な組織サンプリングを行ない、細胞タイプをすべて明らかにするのは時間やコストの観点から現実的ではありません。そこで私は、特定の細胞が種に存在するのかを、ゲノム配列から判定するプロセスを構築します。具体的には、脊椎動物の視細胞サブタイプを対象とし、異なった視細胞サブタイプのレパートリーをもつ生物のゲノム配列を用いて視細胞種類の予測を試みます。</p>
+                        <p>核となるアイデアは、幅広い生物種から取得されたクロマチンアクセッシビリティをもとに、DNA配列からオープンクロマチン領域を予測するモデルです。これまでに取得した合計８種類の脊椎動物それぞれにおけるATAC-seqデータを用いて、それぞれの生物において予測モデルを樹立します。さらに、これらのモデルを統合して、生物種によらない細胞種の特徴を学習したユニバーサルモデルをつくります。ユニバーサルモデルによって予測されたクロマチンプロファイルをもとに細胞種である確率を算出し、調べた生物に特定の細胞タイプがあるかを調べます。</p>
+                    </li>
+                    <li>
+                        <h3>眼の相同性の探求</h3>
+                        <p>幅広い分類群にわたる動物は、外界の光を活用するため、眼球を持ちます。これら器官は、「光を受容する」や「光刺激を脳へ投射する」といった機能が相同です。興味深いことに、マウスのPAX6は眼球発生をハエの脚に誘導でき、つまり哺乳類とハエの転写制御因子PAX6はともに分子的に相互交換可能です。進化の過程で１度だけ眼球をつくる仕組みが生まれたと想定されています。しかしながら、遠縁な動物では、眼球の発生や、神経の種類はそれぞれ全く異なり、発現する遺伝子の類似性も乏しい。そこで、これまでに私が開発した細胞クラス比較法を、脊椎動物から無脊椎動物へと拡大して適応します。具体的にはシングルセルATAC-seqを、ホヤやハエなどの進化的に重要な位置を占める無脊椎動物において行い、転写因子モチーフの組み合わせを比べ、眼球の起源に迫りたい。またさらには、脊椎動物の網膜細胞クラスそれぞれに備わる転写因子モチーフの組み合わせの進化起源も合わせて同定されると期待できる。</p>
+                    </li>
+                    <li>
+                        <h3>遺伝子転写を誘導する転写因子モチーフの組み合わせ</h3>
+                        <p>私たちのこれまでの研究により、それぞれの細胞クラスにおいては、転写因子モチーフの組み合わせが種を超えて広く保存されていることが分かりました（<a href="https://doi.org/10.1126/sciadv.adw7681">論文</a>）。その一方で、１つの機能的なシス領域を構成する、転写モチーフの組み合わせは分かっていません。そこで、ゼブラフィッシュ、アフリカツメガエル、ニワトリ、ネズミ、ヒトのオルガノイドなど、遺伝子導入系が確立されている生物においてスループットの高いレポーターアッセイをそれぞれの生物において行います。これにより、遺伝子転写と連関し、かつ進化的に保存された転写因子モチーフの組み合わせを見出します。</p>
+                    </li>
+                </ul>
+            </div>
+            <div lang="en" class="research-copy" style="display: none;">
+                <h2>Research Ideas</h2>
+                <ul class="research-ideas">
+                    <li>
+                        <h3>Predicting specific cell types from genome sequences</h3>
+                        <p>There is a lot of data about genomes from different organisms. This data helps us understand how animals' traits are formed. It seems that each animal has certain cell types in its retina. These cell types help each animal adapt to its own light environment. By studying how cell types change over time, we can learn more about how cells evolve. To do this, we need to identify as many cell types as possible in many different organisms. But it would take too long and cost too much to collect samples from all animals and identify all their cell types. So, I will build a process to determine whether a specific cell exists in a species based on its genome sequence. Specifically, I will target photoreceptor subtypes in vertebrates and try to predict photoreceptor types using the genome sequences of organisms with different photoreceptor subtypes.</p>
+                        <p>The main idea is to predict open chromatin regions from DNA sequences based on data about chromatin accessibility from many different species. We will create a prediction model for each species using ATAC-seq data from a total of eight different vertebrate species. We will also combine these models to create a universal model that has learned the characteristics of cell types that are not dependent on the species. We will calculate the probability of a cell type based on the chromatin profile predicted by the universal model. Then, we will investigate whether there are specific cell types in the organisms we have studied.</p>
+                    </li>
+                    <li>
+                        <h3>Exploration of eye homology</h3>
+                        <p>Animals across a wide range of taxa possess eyes to utilize external light, and these organs exhibit homologous functions, such as "receiving light" and "projecting light stimuli to the brain."Notably, mouse transcriptional regulator PAX6 has been observed to induce eye development in the legs of flies, suggesting that PAX6 in mouse and flies are molecularly interchangeable.Consequently, a hypothesis has been postulated that the mechanism underlying eye development emerged on a singular occasion during the course of evolution. However, in distantly related animals, the process of eye development and the types of neurons are completely different, and the sequence similarity of expressed genes is low.In light of these findings, the present study aims to apply the cell class comparison method initially developed in vertebrates to invertebrates.Specifically, the study will entail the implementation of single-cell ATAC-seq of eyes in invertebrates, which occupy a substantial evolutionary niche, including tunicates and flies. This approach will facilitate a comparative analysis of transcription systems, encompassing the examination of combinations of transcription factor motifs.This approach will facilitate the investigation of the evolution of eyes.Furthermore, it is anticipated that the evolutionary origins of the combinations of transcription factor motifs present in each retinal cell class of vertebrates will be identified.</p>
+                    </li>
+                    <li>
+                        <h3>Combinations of transcription factor motifs that induce gene transcription</h3>
+                        <p>Our previous research has shown that combinations of transcription factor motifs are widely conserved across species in each cell class (<a href="https://doi.org/10.1126/sciadv.adw7681">publication</a>). However, the combinations of transcription motifs that constitute a single functional cis-regulatory region are not yet known. Therefore, we will conduct high-throughput reporter assays in organisms with established gene introduction systems, such as zebrafish, African clawed frog, chicken, mouse, and human organoids. This will allow us to identify combinations of transcription factor motifs that are associated with gene transcription and evolutionarily conserved.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -116,7 +150,7 @@
     </footer>
 
     <!-- java scriptの読み込み -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=20260919-news" defer></script>
 
 </body>
 </html>
