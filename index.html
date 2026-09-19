@@ -2,31 +2,33 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file:; media-src 'self' file:; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; connect-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Yohey Ogawa (小川 洋平) </title>
 
     <!-- 外部CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style_v2.css?v=20260919-intro">
+    <link rel="stylesheet" href="style_v2.css?v=security-20260919">
 
 </head>
 
 <body>
 
     <div class="language-switch">
-        <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        <a href="#" onclick="switchLanguage('en')">English</a>
+        <a href="#" data-language="ja">日本語</a>
+        <a href="#" data-language="en">English</a>
         <!-- mobile-header を直下に移動 -->
         <div class="mobile-header">
             <div lang="ja">
-                <a href="#" onclick="toggleNav()">目次</a>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">目次</a>
             </div>
-            <div lang="en" style="display: none;">
-                <a href="#" onclick="toggleNav()">menu</a>
+            <div lang="en" hidden>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">menu</a>
             </div>
         </div>
     </div>
 
-    <nav>
+    <nav id="site-navigation">
         <ul>
             <div lang="ja">
                 <li><a href="#overview">小川洋平</a></li>
@@ -39,7 +41,7 @@
                 <li><a href="#awards">受賞</a></li>
                 <li><a href="#contact">連絡先</a></li>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <li><a href="#overview">Yohei Ogawa</a></li>
                 <li><a href="currentresearch.html?lang=en">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
@@ -53,9 +55,9 @@
         </ul>
         <!-- News -->
         <div class="update-history">
-            <p style="text-indent: 0em;">------------------------</p>
-            <p lang="ja" style="text-indent: 0em;">News</p>
-            <p lang="en" style="display: none;text-indent: 0em;">News</p>
+            <p>------------------------</p>
+            <p lang="ja">News</p>
+            <p lang="en" hidden>News</p>
             <ul id="update-list"></ul>
         </div>
     </nav>
@@ -72,7 +74,7 @@
                 <!--<p class="sub-title">生物科学研究者</p>-->
             </header>
             <p lang="ja" class="site-introduction">ゲノムの種間比較を通じて、遺伝子制御と細胞の多様性・進化を探る研究を紹介します。研究テーマや成果、中心仮説、論文などの業績をまとめています。</p>
-            <p lang="en" class="site-introduction" style="display: none;">This website introduces my research on gene regulation, cell diversity, and evolution through comparative genomics, along with current projects, findings, the central hypothesis, and publications.</p>
+            <p lang="en" class="site-introduction" hidden>This website introduces my research on gene regulation, cell diversity, and evolution through comparative genomics, along with current projects, findings, the central hypothesis, and publications.</p>
 
         </section>
 
@@ -85,7 +87,7 @@
                 </ul>
 
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <h2>Research Themes</h2>
                  <ul>
                     <li><b><a href="currentresearch.html?lang=en#repeats">Interspecies comparison of interspersed repeats and simple repeats</a> (in collaboration with Dr. Shigehiro Kuraku)</b></li>
@@ -100,7 +102,7 @@
                     <li><a href="research.html#zebrafish">ゼブラフィッシュ視細胞サブタイプのネットワークの同定</a></li>
                 </ul>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                <h2>Previous Research</h2>
                <ul>
                     <li><a href="research.html?lang=en#zebrafish">Identification of transcriptional network in zebrafish photoreceptors</a></li>
@@ -111,103 +113,103 @@
             <div lang="ja">
                 <h2>業績（抜粋）</h2>
                 <ol>
-                    <li style="margin-top: 10px;">
-                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
+                    <li class="citation-entry">
+                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span class="publication-author"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
                         <a href="https://doi.org/10.1101/gr.281149.125">Tracing genome size dynamics in sharks and rays with inclusive sequence analysis by the Squalomix Consortium.</a>
                         <i><b>Genome Res.</b></i> 36, 1708–1723 (2026).
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo,
                         <a href="https://doi.org/10.1126/sciadv.adw7681"> Conservation of cis-regulatory codes over half a billion years of evolution. </a> 
                         <b><i>Sci. Adv.</i></b> 11, eadw7681 (2025).
                     </li>
-                    <li style="margin-top: 10px;">
-                        Y. Liu, E. C. Hurley, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Gause, M. B. Toomey, C. A. Myers, J. C. Corbo, 
+                    <li class="citation-entry">
+                        Y. Liu, E. C. Hurley, <span class="publication-author"><b>Y. Ogawa</b></span>, M. Gause, M. B. Toomey, C. A. Myers, J. C. Corbo,
                         <a href="https://doi.org/10.1016/j.cub.2025.02.040">Avian photoreceptor homologies and the origin of double cones.</a>
                         <i><b>Curr. Biol.</b></i> 35, 2215-2227.e6 (2025).
                     </li>
-                    <li style="margin-top: 10px;">
-                        R. Arbore, S. Barbosa, J. Brejcha, <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, M. P. J. Nicolaï, P. Pereira, S. J. Sabatino, A. Cloutier, E. S. K. Poon, C. I. Marques, P. Andrade, G. Debruyn, S. Afonso, R. Afonso, S. G. Roy, U. Abdu, R. J. Lopes, P. Mojzeš, P. Marík, S. Y. W. Sin, M. A. White, P. M. Araújo, J. C. Corbo, M. Carneiro, 
+                    <li class="citation-entry">
+                        R. Arbore, S. Barbosa, J. Brejcha, <span class="publication-author"><b>Y. Ogawa</b></span>, Y. Liu, M. P. J. Nicolaï, P. Pereira, S. J. Sabatino, A. Cloutier, E. S. K. Poon, C. I. Marques, P. Andrade, G. Debruyn, S. Afonso, R. Afonso, S. G. Roy, U. Abdu, R. J. Lopes, P. Mojzeš, P. Marík, S. Y. W. Sin, M. A. White, P. M. Araújo, J. C. Corbo, M. Carneiro,
                         <a href="https://doi.org/10.1126/science.adp7710"> A molecular mechanism for bright color variation in parrots.</a> 
                         <i><b>Science</b></i> 386, eadp7710 (2024).
                     </li>
-                    <li style="margin-top: 10px;">
-                    L. I. Volkov,<span style="color: blue;"><b>Y. Ogawa</b></span>, R. Somjee, H. E. Vedder, H. E. Powell, D. Poria, S. Meiselman, V. J. Kefalov, J. C. Corbo, 
+                    <li class="citation-entry">
+                    L. I. Volkov,<span class="publication-author"><b>Y. Ogawa</b></span>, R. Somjee, H. E. Vedder, H. E. Powell, D. Poria, S. Meiselman, V. J. Kefalov, J. C. Corbo,
                     <a href="https://doi.org/10.1073/pnas.2402121121"> Samd7 represses short-wavelength cone genes to preserve long-wavelength cone and rod photoreceptor identity.</a>
                     <i><b>Proc. Natl. Acad. Sci. U.S.A.</b></i> 121, e2402121121 (2024).
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>,
                         <a href="https://doi.org/10.3330/hikakuseiriseika.40.128"> Photoreceptor differentiation mechanisms underlying cell-type homology among vertebrates.</a>
                         <i><b>比較生理生化学</b></i> 40, 128–136 (2023). in Japanese. English translated version is available upon request.
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Fukada, and D. Kojima, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Fukada, and D. Kojima,
                     <a href="https://doi.org/10.1126/sciadv.abi9784">Foxq2 determines blue cone identity in zebrafish.</a>  
                     <i><b>Science Advances</b></i> 7, 1–16 (2021).   
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span> and J. C. Corbo,  
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span> and J. C. Corbo,
                         <a href="https://doi.org/10.1038/s41598-021-96837-z">Partitioning of gene expression among zebrafish photoreceptor subtypes.</a>  
                         <i><b>Scientific Reports</b></i> 11, 17340 (2021). 
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Asano, A. Muto, K. Kawakami, Y. Suzuki, D. Kojima, and Y. Fukada, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Asano, A. Muto, K. Kawakami, Y. Suzuki, D. Kojima, and Y. Fukada,
                         <a href="https://doi.org/10.1073/pnas.1812884116">Six6 and Six7 coordinately regulate expression of middle-wavelength opsins in zebrafish.</a>  
                         <i><b>Proc. Natl. Acad. Sci. U.S.A.</b></i> 116, 4651–4660 (2019). 
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, D. Kojima, and Y. Fukada, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, D. Kojima, and Y. Fukada,
                         <a href="https://doi.org/10.1098/rspb.2015.0659 ">Homeobox transcription factor Six7 governs expression of green opsin genes in zebrafish.</a>  
                         <i><b> Proc. R. Soc. B: Biol. </b></i> 282, 20150659 (2015).
                     </li>
                 </ol>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <h2>Selected Publications</h2>
                 <ol>
-                    <li style="margin-top: 10px;">
-                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
+                    <li class="citation-entry">
+                        S. Kuraku, Y. W. Kawaguchi, T. Niwa, R. Misawa, <span class="publication-author"><b>Y. Ogawa</b></span>, M. Kadota, K. Saito, W. Godo, T. Sakamoto, W. Takagi, S. Isobe, K. Shirasawa, A. Kawaguchi,
                         <a href="https://doi.org/10.1101/gr.281149.125">Tracing genome size dynamics in sharks and rays with inclusive sequence analysis by the Squalomix Consortium.</a>
                         <i><b>Genome Res.</b></i> 36, 1708–1723 (2026).
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo,
                         <a href="https://doi.org/10.1126/sciadv.adw7681"> Conservation of cis-regulatory codes over half a billion years of evolution. </a> 
                         <b><i>Sci. Adv.</i></b> 11, eadw7681 (2025).
                     </li>
-                    <li style="margin-top: 10px;">
-                        Y. Liu, E. C. Hurley, <span style="color: blue;"><b>Y. Ogawa</b></span>, M. Gause, M. B. Toomey, C. A. Myers, J. C. Corbo, 
+                    <li class="citation-entry">
+                        Y. Liu, E. C. Hurley, <span class="publication-author"><b>Y. Ogawa</b></span>, M. Gause, M. B. Toomey, C. A. Myers, J. C. Corbo,
                         <a href="https://doi.org/10.1016/j.cub.2025.02.040">Avian photoreceptor homologies and the origin of double cones.</a>
                         <i><b>Curr. Biol.</b></i> 35, 2215-2227.e6 (2025).
                     </li>
-                    <li style="margin-top: 10px;">
-                        R. Arbore, S. Barbosa, J. Brejcha, <span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, M. P. J. Nicolaï, P. Pereira, S. J. Sabatino, A. Cloutier, E. S. K. Poon, C. I. Marques, P. Andrade, G. Debruyn, S. Afonso, R. Afonso, S. G. Roy, U. Abdu, R. J. Lopes, P. Mojzeš, P. Marík, S. Y. W. Sin, M. A. White, P. M. Araújo, J. C. Corbo, M. Carneiro, 
+                    <li class="citation-entry">
+                        R. Arbore, S. Barbosa, J. Brejcha, <span class="publication-author"><b>Y. Ogawa</b></span>, Y. Liu, M. P. J. Nicolaï, P. Pereira, S. J. Sabatino, A. Cloutier, E. S. K. Poon, C. I. Marques, P. Andrade, G. Debruyn, S. Afonso, R. Afonso, S. G. Roy, U. Abdu, R. J. Lopes, P. Mojzeš, P. Marík, S. Y. W. Sin, M. A. White, P. M. Araújo, J. C. Corbo, M. Carneiro,
                         <a href="https://doi.org/10.1126/science.adp7710"> A molecular mechanism for bright color variation in parrots.</a> 
                         <i><b>Science</b></i> 386, eadp7710 (2024).
                     </li>
-                    <li style="margin-top: 10px;">
-                    L. I. Volkov,<span style="color: blue;"><b>Y. Ogawa</b></span>, R. Somjee, H. E. Vedder, H. E. Powell, D. Poria, S. Meiselman, V. J. Kefalov, J. C. Corbo, 
+                    <li class="citation-entry">
+                    L. I. Volkov,<span class="publication-author"><b>Y. Ogawa</b></span>, R. Somjee, H. E. Vedder, H. E. Powell, D. Poria, S. Meiselman, V. J. Kefalov, J. C. Corbo,
                     <a href="https://doi.org/10.1073/pnas.2402121121"> Samd7 represses short-wavelength cone genes to preserve long-wavelength cone and rod photoreceptor identity.</a>
                     <i><b>Proc. Natl. Acad. Sci. U.S.A.</b></i> 121, e2402121121 (2024).
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Fukada, and D. Kojima, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Fukada, and D. Kojima,
                     <a href="https://doi.org/10.1126/sciadv.abi9784">Foxq2 determines blue cone identity in zebrafish.</a>  
                     <i><b>Science Advances</b></i> 7, 1–16 (2021).   
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span> and J. C. Corbo,  
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span> and J. C. Corbo,
                         <a href="https://doi.org/10.1038/s41598-021-96837-z">Partitioning of gene expression among zebrafish photoreceptor subtypes.</a>  
                         <i><b>Scientific Reports</b></i> 11, 17340 (2021). 
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Asano, A. Muto, K. Kawakami, Y. Suzuki, D. Kojima, and Y. Fukada, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, Y. Asano, A. Muto, K. Kawakami, Y. Suzuki, D. Kojima, and Y. Fukada,
                         <a href="https://doi.org/10.1073/pnas.1812884116">Six6 and Six7 coordinately regulate expression of middle-wavelength opsins in zebrafish.</a>  
                         <i><b>Proc. Natl. Acad. Sci. U.S.A.</b></i> 116, 4651–4660 (2019). 
                     </li>
-                    <li style="margin-top: 10px;">
-                        <span style="color: blue;"><b>Y. Ogawa</b></span>, T. Shiraki, D. Kojima, and Y. Fukada, 
+                    <li class="citation-entry">
+                        <span class="publication-author"><b>Y. Ogawa</b></span>, T. Shiraki, D. Kojima, and Y. Fukada,
                         <a href="https://doi.org/10.1098/rspb.2015.0659 ">Homeobox transcription factor Six7 governs expression of green opsin genes in zebrafish.</a>  
                         <i><b> Proc. R. Soc. B: Biol. </b></i> 282, 20150659 (2015).
                     </li>
@@ -219,7 +221,7 @@
             <div lang="ja">
                 <h2>書籍</h2>
                 <ol>
-                    <li style="margin-top: 10px;">
+                    <li class="citation-entry">
                         <b>小川洋平</b>，
                         <a href="https://www.yodosha.co.jp/jikkenigaku/articles/index.html?ci=636700">5億年の進化を経ても保たれる細胞型制御</a>．
                         <b><i>実験医学</i></b> 44(8)，2026年5月号（羊土社）．連載「カレントトピックス」への寄稿．
@@ -228,10 +230,10 @@
                     </li>
                 </ol>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <h2>Books</h2>
                 <ol>
-                    <li style="margin-top: 10px;">
+                    <li class="citation-entry">
                         <b>Y. Ogawa</b>,
                         <a href="https://www.yodosha.co.jp/jikkenigaku/articles/index.html?ci=636700">Conservation of cis-regulatory codes over half a billion years of evolution.</a>
                         <b><i>Jikken Igaku</i></b> 44(8), May 2026 (Yodosha). Contributed article in “Current Topics” (in Japanese).
@@ -276,38 +278,38 @@
                     </li>
                 </ul>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <h2>Career</h2>
                 <ul>
                     <li>
                         2025 Nov-Present, <b>Project Assistant Professor</b><br>
                         National Institue of Genetics, Molecular Life History Laboratory, Mishima, Japan
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2025 May-Oct, <b>Project Researcher</b><br>
                         National Institue of Genetics, Molecular Life History Laboratory, Mishima, Japan
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2023 Sept-2025 Apr, <b>Staff Scientist</b><br>
                         Washington University School of Medicine, Department of Pathology and Immunology, St. Louis, USA
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2018 Sept-2023 Aug, <b>Postdoctoral Research Associate</b><br>
                         Washington University School of Medicine, Department of Pathology and Immunology, St. Louis, USA
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2018 Apr-Aug, <b>Postdoctoral Fellow</b><br>
                         University of Tokyo, Department of Biological Sciences, Tokyo, JAPAN
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2017 Apr-2018 Mar, <b>Research Fellow (Postdoctoral) of Japan Society for the Promotion of Science</b><br>
                         University of Tokyo, Department of Biological Sciences, Tokyo, JAPAN
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2012-2017, <b>Graduate student</b><br>
                         The University of Tokyo, Graduate School of Science, Department of Biological Sciences, Tokyo, JAPAN
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2008-2012, <b>Undergraduate student</b><br>
                         The University of Tokyo, Faculty of Science, Department of Biophysics and Biochemistry, Tokyo, JAPAN
                     </li>
@@ -322,19 +324,19 @@
                     <li>
                         2026年8月 <b>第8回日本光生物学協会奨励賞</b>（日本光生物学協会）
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2022年11月 <b>第31回吉田奨励賞</b>（日本比較生理生化学会）
                     </li>
                 </ul>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <h2>Awards</h2>
                 <ul>
                     <li>
                         2026 Aug, <b>8th Young Scientist Award</b><br>
                         Photobiology Association of Japan
                     </li>
-                    <li style="margin-top: 0.5em;">
+                    <li class="timeline-entry">
                         2022 Nov, <b>31st Yoshida Prize for Young Researchers</b><br>
                         The Japanese Society for Comparative Physiology and Biochemistry
                     </li>
@@ -347,39 +349,39 @@
                 <h2>連絡先</h2>
                 <p>お問い合わせは以下の方法でお願いします：</p>
                 <ul>
-                    <li>X: <a href="https://x.com/YoheyOgawa" target="_blank">@YoheyOgawa</a></li>
-                    <li>BlueSky: <a href="https://bsky.app/profile/yohey-ogawa.bsky.social" target="_blank">bsky.app/profile/yohey-ogawa.bsky.social</a></li>
+                    <li>X: <a href="https://x.com/YoheyOgawa" target="_blank" rel="noopener">@YoheyOgawa</a></li>
+                    <li>BlueSky: <a href="https://bsky.app/profile/yohey-ogawa.bsky.social" target="_blank" rel="noopener">bsky.app/profile/yohey-ogawa.bsky.social</a></li>
                     <li>Email: <span class="email">yohei.ogawa(アットマーク)nig.ac.jp</span></li>
                 </ul>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <h2>Contact</h2>
                 <p>You can reach me through the following methods:</p>
                 <ul>
-                    <li>X: <a href="https://x.com/YoheyOgawa" target="_blank">@YoheyOgawa</a></li>
-                    <li>BlueSky: <a href="https://bsky.app/profile/yohey-ogawa.bsky.social" target="_blank">bsky.app/profile/yohey-ogawa.bsky.social</a></li>
+                    <li>X: <a href="https://x.com/YoheyOgawa" target="_blank" rel="noopener">@YoheyOgawa</a></li>
+                    <li>BlueSky: <a href="https://bsky.app/profile/yohey-ogawa.bsky.social" target="_blank" rel="noopener">bsky.app/profile/yohey-ogawa.bsky.social</a></li>
                     <li>Email: <span class="email">yohei.ogawa(アットマーク)nig.ac.jp</span></li>
                 </ul>
             </div>
         </section>
 
         <section id="external-links">
-            <div lang="ja" style="display: none;">
+            <div lang="ja" hidden>
                 <h2>外部リンク</h2>
                 <ul>
-                    <li>Researchmap: <a href="https://researchmap.jp/ogativity" target="_blank"> researchmap.jp/ogativity</a></li>
-                    <li>Researchgate: <a href="https://www.researchgate.net/profile/Yohey-Ogawa-2" target="_blank">researchgate.net/profile/Yohey-Ogawa-2</a></li>
-                    <li>Google Scholar: <a href="https://scholar.google.com/citations?user=TaOYI3QAAAAJ&hl=ja&oi=sra" target="_blank">scholar.google.com/citations?user=Yohey-Ogawa</a></li>
-                    <li>ORCID: <a href="https://orcid.org/0000-0001-9031-4393" target="_blank">orcid.org/0000-0001-9031-4393</a></li>
+                    <li>Researchmap: <a href="https://researchmap.jp/ogativity" target="_blank" rel="noopener"> researchmap.jp/ogativity</a></li>
+                    <li>Researchgate: <a href="https://www.researchgate.net/profile/Yohey-Ogawa-2" target="_blank" rel="noopener">researchgate.net/profile/Yohey-Ogawa-2</a></li>
+                    <li>Google Scholar: <a href="https://scholar.google.com/citations?user=TaOYI3QAAAAJ&hl=ja&oi=sra" target="_blank" rel="noopener">scholar.google.com/citations?user=Yohey-Ogawa</a></li>
+                    <li>ORCID: <a href="https://orcid.org/0000-0001-9031-4393" target="_blank" rel="noopener">orcid.org/0000-0001-9031-4393</a></li>
                 </ul>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <h2>External Links</h2>
                 <ul>
-                    <li>Researchmap: <a href="https://researchmap.jp/ogativity" target="_blank"> researchmap.jp/ogativity</a></li>
-                    <li>Researchgate: <a href="https://www.researchgate.net/profile/Yohey-Ogawa-2" target="_blank">researchgate.net/profile/Yohey-Ogawa-2</a></li>
-                    <li>Google Scholar: <a href="https://scholar.google.com/citations?user=TaOYI3QAAAAJ&hl=ja&oi=sra" target="_blank">scholar.google.com/citations?user=Yohey-Ogawa</a></li>
-                    <li>ORCID: <a href="https://orcid.org/0000-0001-9031-4393" target="_blank">orcid.org/0000-0001-9031-4393</a></li>
+                    <li>Researchmap: <a href="https://researchmap.jp/ogativity" target="_blank" rel="noopener"> researchmap.jp/ogativity</a></li>
+                    <li>Researchgate: <a href="https://www.researchgate.net/profile/Yohey-Ogawa-2" target="_blank" rel="noopener">researchgate.net/profile/Yohey-Ogawa-2</a></li>
+                    <li>Google Scholar: <a href="https://scholar.google.com/citations?user=TaOYI3QAAAAJ&hl=ja&oi=sra" target="_blank" rel="noopener">scholar.google.com/citations?user=Yohey-Ogawa</a></li>
+                    <li>ORCID: <a href="https://orcid.org/0000-0001-9031-4393" target="_blank" rel="noopener">orcid.org/0000-0001-9031-4393</a></li>
                 </ul>
             </div>
         </section>
@@ -390,8 +392,8 @@
     </footer>
 
     <!-- java scriptの読み込み -->
-    <script src="update_Mishima.js?v=20260919-links" defer></script>
-    <script src="script.js?v=20260919-news" defer></script>
+    <script src="update_Mishima.js?v=security-20260919" defer></script>
+    <script src="script.js?v=security-20260919" defer></script>
 
 </body>
 </html>

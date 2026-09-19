@@ -3,6 +3,23 @@ html {
     font-size: 125%; /* 基本サイズの125% */
 }
 
+/* hidden must take precedence over grid/flex rules when switching languages. */
+[hidden] {
+    display: none !important;
+}
+
+.publication-author {
+    color: blue;
+}
+
+.citation-entry {
+    margin-top: 10px;
+}
+
+.timeline-entry {
+    margin-top: 0.5em;
+}
+
 body {
     font-family: "Arial", sans-serif; /* 日本語のフォントをゴシックに変更 */
     margin: 0;
@@ -197,6 +214,10 @@ p {
     height: 32px;
     padding: 0 10px;
     line-height: 1;
+}
+
+.update-history p {
+    text-indent: 0;
 }
 
 .update-history ul {

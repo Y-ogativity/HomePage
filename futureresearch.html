@@ -2,31 +2,33 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file:; media-src 'self' file:; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; connect-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Research Hypothesis (研究の中心仮説) | Yohey Ogawa</title>
 
     <!-- 外部CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style_v2.css?v=20260919-hypothesis">
+    <link rel="stylesheet" href="style_v2.css?v=security-20260919">
 
 </head>
 
 <body class="hypothesis-page">
 
     <div class="language-switch">
-        <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        <a href="#" onclick="switchLanguage('en')">English</a>
+        <a href="#" data-language="ja">日本語</a>
+        <a href="#" data-language="en">English</a>
         <!-- mobile-header を直下に移動 -->
         <div class="mobile-header">
             <div lang="ja">
-                <a href="#" onclick="toggleNav()">目次</a>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">目次</a>
             </div>
-            <div lang="en" style="display: none;">
-                <a href="#" onclick="toggleNav()">Menu</a>
+            <div lang="en" hidden>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">Menu</a>
             </div>
         </div>
     </div>
 
-    <nav>
+    <nav id="site-navigation">
         <ul>
             <div lang="ja">
                 <li><a href="index.html#overview">小川洋平</a></li>
@@ -39,7 +41,7 @@
                 <li><a href="index.html#awards">受賞</a></li>
                 <li><a href="index.html#contact">連絡先</a></li>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <li><a href="index.html?lang=en#overview">Yohei Ogawa</a></li>
                 <li><a href="currentresearch.html?lang=en">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
@@ -59,7 +61,7 @@
                 <h1>研究の中心仮説</h1>
                 <p class="research-mission"><strong>ゲノムの非コード領域に着目した生物種間比較を行い、配列の相同性に依存しない高次システムの進化的変遷や起源を解明する</strong></p>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <h1>Central Research Hypothesis</h1>
                 <p class="research-mission"><strong>Compare noncoding genomic regions across species to uncover the evolutionary transitions and origins of higher-order biological systems without relying on sequence homology.</strong></p>
             </div>
@@ -80,7 +82,7 @@
                     <figcaption>配列アラインメントに依存しない遺伝子制御の相同性（Alignment-independent regulatory homology）という仮説。</figcaption>
                 </figure>
             </div>
-            <div lang="en" class="research-layout" style="display: none;">
+            <div lang="en" class="research-layout" hidden>
                 <div class="research-copy">
                     <h2>Transcriptional systems can be represented as patterns of transcription factor binding to DNA</h2>
                     <p>Eukaryotic transcription factors are capable of recognizing and binding to specific nucleotide sequences in the genome. These recognition sequences exhibit flexibility, and the general term for recognition sequence patterns is transcription factor binding motifs (e.g., homeodomain motifs). Multiple transcription factors gather near DNA through transcription factor motifs to form functional gene regulatory regions (cis-regulatory regions). These cis-regulatory regions promote or inhibit the transcription of individual genes, resulting in cell identity and function. The term "cis-regulatory codes" is employed to denote the functional combinations of transcription factor binding sequences. The objective of my study is to make comparisons of cis-regulatory codes across species, with the aim of conducting interspecies comparisons of cell identity and function over extended periods of time (hundreds of millions of years) that are not contingent upon the conservation of nucleotide sequences.</p>
@@ -98,7 +100,7 @@
                 <p>ヒトゲノムのうち遺伝子をコードする領域はたったの数％です。また、ヒトの遺伝子数は多くても３万遺伝子ほどしかありません。これらの遺伝子を使って、例えばヒトの脳においては、約９００億個の神経細胞が作られ、神経細胞は数百～数千種類のサブタイプを構成します。このように多様な細胞を形成するためには、それぞれの遺伝子が適切なタイミングかつ特定の場所にて使用（遺伝子発現）される必要があります。個々の遺伝子の発現は、ヒトにおいては約３千の転写関連因子が織りなす転写調節システムにより制御されます。また他の動物においても、体の構造が単純か複雑かに関わらず、遺伝子の数は大まかに数万程度で、桁が同じです。つまり転写ネットワークの複雑化により、それぞれの生物にユニークな形質が生み出されます。進化の過程では、それぞれの遺伝子が機能を失ったり獲得したりするとともに、遺伝子の転写調節領域、つまりゲノムの非コード領域が変化していると分かってきました。それぞれの生物の進化過程で転写ネットワークがどのように変化するか、その多様性と共通性の詳細の解明はまだ始まったばかりです。</p>
                 <p>私はなかでも特に、多岐に及ぶ脊椎動物において、細胞のユニークな機能やアイデンティティを規定する転写システムの解析を志しています。さらに種間比較を行ない、転写システムの進化的変遷や起源の解明を目指しています。また将来的には、遺伝子工学を用いてヒトの細胞に新たな遺伝子発現調節モジュールを付与することにより、生物工学的アプローチも試みます。</p>
             </div>
-            <div lang="en" class="research-copy" style="display: none;">
+            <div lang="en" class="research-copy" hidden>
                 <h2>Research Goals</h2>
                 <p>Only a few percent of the human genome contains genes, and there are about 30,000 of them at most. Using genes in the human brain, for example, about 90 billion neurons are created, and neurons form hundreds to thousands of subtypes. To form such diverse cells, each gene must be used (expressed) at the right time and in the right place. The expression of individual genes is controlled by a system of about 3,000 factors in humans and mice. In animals, the number of genes is roughly tens of thousands, regardless of whether their body structure is simple or complex. In other words, the complexity of the transcription network creates the unique traits of each organism. It has been found that during evolution, the transcriptional control mechanisms change as genes lose or gain functions. We are just beginning to understand how these networks change during evolution.</p>
                 <p>I am particularly interested in studying the transcription systems that define the unique functions and identities of cells in non-mammalian vertebrates. Furthermore, I aim to understand how these systems have evolved and where they came from by comparing them across different species, including mammals, which is a common practice in research. In the future, I hope to contribute to medicine by using genetic engineering to add new functions to human cells.</p>
@@ -124,7 +126,7 @@
                     </li>
                 </ul>
             </div>
-            <div lang="en" class="research-copy" style="display: none;">
+            <div lang="en" class="research-copy" hidden>
                 <h2>Research Ideas</h2>
                 <ul class="research-ideas">
                     <li>
@@ -150,7 +152,7 @@
     </footer>
 
     <!-- java scriptの読み込み -->
-    <script src="script.js?v=20260919-news" defer></script>
+    <script src="script.js?v=security-20260919" defer></script>
 
 </body>
 </html>

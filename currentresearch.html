@@ -2,25 +2,27 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file:; media-src 'self' file:; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; connect-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Current Research (現在の研究) | Yohey Ogawa</title>
-    <link rel="stylesheet" href="style_v2.css">
+    <link rel="stylesheet" href="style_v2.css?v=security-20260919">
 </head>
 <body class="current-research-page">
     <div class="language-switch">
-        <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        <a href="#" onclick="switchLanguage('en')">English</a>
+        <a href="#" data-language="ja">日本語</a>
+        <a href="#" data-language="en">English</a>
         <div class="mobile-header">
             <div lang="ja">
-                <a href="#" onclick="toggleNav()">目次</a>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">目次</a>
             </div>
-            <div lang="en" style="display: none;">
-                <a href="#" onclick="toggleNav()">Menu</a>
+            <div lang="en" hidden>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">Menu</a>
             </div>
         </div>
     </div>
 
-    <nav>
+    <nav id="site-navigation">
         <ul>
             <div lang="ja">
                 <li><a href="index.html?lang=ja#overview">小川洋平</a></li>
@@ -33,7 +35,7 @@
                 <li><a href="index.html?lang=ja#awards">受賞</a></li>
                 <li><a href="index.html?lang=ja#contact">連絡先</a></li>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <li><a href="index.html?lang=en#overview">Yohei Ogawa</a></li>
                 <li><a href="currentresearch.html?lang=en" aria-current="page">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
@@ -53,7 +55,7 @@
                 <h1>現在の研究</h1>
                 <p>ゲノム配列の多様性と、細胞の個性を生み出す遺伝子制御の仕組みを調べています。</p>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <h1>Current Research</h1>
                 <p>Exploring genome sequence diversity and the gene regulatory mechanisms that shape cell identity.</p>
             </div>
@@ -73,7 +75,7 @@
                     <figcaption>トランスポゾンとタンデムリピートを統合して評価する解析の流れ。</figcaption>
                 </figure>
             </div>
-            <div lang="en" class="research-layout" style="display: none;">
+            <div lang="en" class="research-layout" hidden>
                 <div class="research-copy">
                     <h2>Decoding repetitive sequences in genomes</h2>
                     <p class="research-collaboration">In collaboration with Dr. Shigehiro Kuraku</p>
@@ -102,7 +104,7 @@
                     <figcaption>配列モチーフに着目し、異なる種の細胞に共通する制御コードを比較。</figcaption>
                 </figure>
             </div>
-            <div lang="en" class="research-layout" style="display: none;">
+            <div lang="en" class="research-layout" hidden>
                 <div class="research-copy">
                     <h2>Comparing gene regulation across photoreceptor types</h2>
                     <p class="research-collaboration">In collaboration with Dr. Joseph C. Corbo</p>
@@ -117,8 +119,8 @@
             </div>
             <div class="research-reference">
                 <p lang="ja"><b>関連論文</b></p>
-                <p lang="en" style="display: none;"><b>Related publication</b></p>
-                <p><span style="color: blue;"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo,
+                <p lang="en" hidden><b>Related publication</b></p>
+                <p><span class="publication-author"><b>Y. Ogawa</b></span>, Y. Liu, C. A. Myers, A. Morshedian, G. L. Fain, A. P. Sampath, J. C. Corbo,
                     <a href="https://doi.org/10.1126/sciadv.adw7681">Conservation of cis-regulatory codes over half a billion years of evolution.</a>
                     <b><i>Sci. Adv.</i></b> 11, eadw7681 (2025).
                 </p>
@@ -129,6 +131,6 @@
     <footer>
         <p>&copy; 2024 小川 洋平 Yohei Ogawa All Rights Reserved.</p>
     </footer>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=security-20260919" defer></script>
 </body>
 </html>

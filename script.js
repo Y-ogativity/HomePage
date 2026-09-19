@@ -13,8 +13,7 @@ function loadUpdates() {
 function renderUpdates(updates) {
     const updateList = document.getElementById('update-list');
     if (!updateList) return;
-    //console.log(updateList); // nullなら要素が取得できていない
-    updateList.innerHTML = ''; // 一旦リストをクリア
+    updateList.replaceChildren(); // 一旦リストをクリア
     updates.forEach(update => {
         const listItem = document.createElement('li');
         listItem.textContent = `${update.date} - ${update[currentLanguage]}`;
@@ -24,7 +23,7 @@ function renderUpdates(updates) {
         if (typeof detailUrl === 'string' && detailUrl) {
             try {
                 const url = new URL(detailUrl, document.baseURI);
-                if (url.protocol === 'https:' || url.protocol === 'http:') {
+                if (url.protocol === 'https:') {
                     const detailLink = document.createElement('a');
                     detailLink.href = url.href;
                     detailLink.textContent = currentLanguage === 'en' ? 'Details' : '詳細';
@@ -40,7 +39,8 @@ function renderUpdates(updates) {
 
 // 言語切り替え関数
 function switchLanguage(lang) {
-    
+    if (lang !== 'ja' && lang !== 'en') return;
+
     // ページ全体の言語を更新 (メタ情報として適切)
     document.documentElement.lang = lang;
     // for News
@@ -53,34 +53,46 @@ function switchLanguage(lang) {
     }
     loadUpdates();
 
-    const sections = document.querySelectorAll('[lang]');
+    const sections = document.querySelectorAll('body [lang]');
     sections.forEach(section => {
-        if (section.getAttribute('lang') === lang) {
-            section.style.display = ''; // デフォルトの表示
-        } else {
-            section.style.display = 'none'; // 非表示
-        }
+        section.hidden = section.getAttribute('lang') !== lang;
     });
 }
 
-// toggle navigation
-// ナビゲーションメニューの表示/非表示を切り替える関数
-function toggleNav() {
-    // ナビゲーション要素を取得
+// ナビゲーションメニューと開閉ボタンの状態を揃える
+function setNavigationOpen(isOpen) {
     const nav = document.querySelector('nav');
-    
-    // ナビゲーションメニューに "active" クラスをトグル
-    // "active" クラスがあれば削除し、なければ追加する
-    nav.classList.toggle('active');
+    if (!nav) return;
+    nav.classList.toggle('active', isOpen);
+    document.querySelectorAll('[data-nav-toggle]').forEach(control => {
+        control.setAttribute('aria-expanded', String(isOpen));
+    });
 }
-
-// ナビゲーション全体にクリックイベントリスナーを追加
-// ナビゲーションをクリックした際に toggleNav 関数を実行
-document.querySelector('nav').addEventListener('click', toggleNav);
-
 
 // ページ初期読み込み時にデフォルトの言語を設定
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-language]').forEach(control => {
+        control.addEventListener('click', event => {
+            event.preventDefault();
+            switchLanguage(control.dataset.language);
+        });
+    });
+
+    document.querySelectorAll('[data-nav-toggle]').forEach(control => {
+        control.addEventListener('click', event => {
+            event.preventDefault();
+            const nav = document.querySelector('nav');
+            if (nav) setNavigationOpen(!nav.classList.contains('active'));
+        });
+    });
+
+    const nav = document.querySelector('nav');
+    if (nav) {
+        nav.addEventListener('click', event => {
+            if (event.target.closest('a')) setNavigationOpen(false);
+        });
+    }
+
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
     let storedLang = null;

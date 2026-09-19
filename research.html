@@ -2,32 +2,34 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file:; media-src 'self' file:; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; connect-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research (研究成果)</title>
 
 
     <!-- 外部CSSファイルの読み込み -->
-    <link rel="stylesheet" href="style_v2.css">
+    <link rel="stylesheet" href="style_v2.css?v=security-20260919">
 
 </head>
 
 <body class="previous-research-page">
 
     <div class="language-switch">
-        <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        <a href="#" onclick="switchLanguage('en')">English</a>
+        <a href="#" data-language="ja">日本語</a>
+        <a href="#" data-language="en">English</a>
         <!-- mobile-header を直下に移動 -->
         <div class="mobile-header">
             <div lang="ja">
-                <a href="#" onclick="toggleNav()">目次</a>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">目次</a>
             </div>
-            <div lang="en" style="display: none;">
-                <a href="#" onclick="toggleNav()">Menu</a>
+            <div lang="en" hidden>
+                <a href="#" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">Menu</a>
             </div>
         </div>
     </div>
 
-    <nav>
+    <nav id="site-navigation">
         <ul>
             <div lang="ja">
                 <li><a href="index.html#overview">小川洋平</a></li>
@@ -40,7 +42,7 @@
                 <li><a href="index.html#awards">受賞</a></li>
                 <li><a href="index.html#contact">連絡先</a></li>
             </div>
-            <div lang="en">
+            <div lang="en" hidden>
                 <li><a href="index.html?lang=en#overview">Yohei Ogawa</a></li>
                 <li><a href="currentresearch.html?lang=en">Current Research</a></li>
                 <li><a href="research.html?lang=en">Previous Research</a></li>
@@ -58,7 +60,7 @@
         <div lang="ja">
             <h1>これまでの研究成果</h1>
         </div>
-        <div lang="en">
+        <div lang="en" hidden>
             <h1>Previous research</h1>
         </div>
         <section id="zebrafish">
@@ -66,8 +68,8 @@
                 <h2 class="previous-research-title">ゼブラフィッシュ視細胞サブタイプのネットワークの同定</h2>
                <!--
                 <h3>紹介記事</h3>
-                <li><a href="https://www.s.u-tokyo.ac.jp/ja/info/7529/" target="_blank" title="青色センサー遺伝子の制御メカニズム〜脊椎動物の色覚の起源に迫る〜">青色センサー遺伝子の制御メカニズム〜脊椎動物の色覚の起源に迫る〜</a></li>
-                <li><a href="https://www.s.u-tokyo.ac.jp/ja/press/2019/6254/" target="_blank" title="青や緑の色覚遺伝子を制御する分子">青や緑の色覚遺伝子を制御する分子</a></li>
+                <li><a href="https://www.s.u-tokyo.ac.jp/ja/info/7529/" target="_blank" rel="noopener" title="青色センサー遺伝子の制御メカニズム〜脊椎動物の色覚の起源に迫る〜">青色センサー遺伝子の制御メカニズム〜脊椎動物の色覚の起源に迫る〜</a></li>
+                <li><a href="https://www.s.u-tokyo.ac.jp/ja/press/2019/6254/" target="_blank" rel="noopener" title="青や緑の色覚遺伝子を制御する分子">青や緑の色覚遺伝子を制御する分子</a></li>
                -->
 
                 <div class="research-layout research-result-row">
@@ -109,7 +111,7 @@
                     <p>プロジェクトが終わって振り返ってみると、哺乳類で失われた遺伝子が、哺乳類では備わっていないシステム（青と緑感受性の錐体サブタイプの分化制御）を担うことが明らかになり、進化の過程で自然選択が生じたと強く示唆されました。比較分子生物学においては、それぞれの生物に備わる独自のシステムの解析は重要です。しかしながらさらに加えて、哺乳類と非哺乳類システムを比較して、より一般的な知識へと昇華させる必要があると実感しました。</p>
                 </div>
             </div>
-            <div lang="en" style="display: none;">
+            <div lang="en" hidden>
                 <h2 class="previous-research-title">Identification of Zebrafish Photoreceptor Subtype Networks</h2>
 
                 <h3>Media Reports</h3>
@@ -168,7 +170,7 @@
     </footer>
 
     <!-- java scriptの読み込み -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=security-20260919" defer></script>
 
 </body>
 </html>
