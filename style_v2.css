@@ -150,6 +150,11 @@ p {
     line-height: 1.7;
 }
 
+.network-introduction {
+    text-indent: 0;
+    line-height: 1.7;
+}
+
 /* プロフィール画像 */
 .profile-image {
     width: 160px;
@@ -260,7 +265,8 @@ nav ul li a {
 /* 研究ページ: 左に文章、右に図を配置 */
 .current-research-page main,
 .previous-research-page main,
-.hypothesis-page main {
+.hypothesis-page main,
+.research-network-page main {
     min-width: 0;
     min-height: 0;
     overflow-wrap: break-word;
@@ -268,7 +274,8 @@ nav ul li a {
 
 .current-research-page p,
 .previous-research-page p,
-.hypothesis-page p {
+.hypothesis-page p,
+.research-network-page p {
     text-indent: 0;
 }
 
@@ -407,6 +414,117 @@ nav ul li a {
     line-height: 1.6;
 }
 
+/* 研究ネットワーク: キーワードごとに研究者と研究の接点を紹介 */
+.network-header {
+    max-width: 54rem;
+    margin-bottom: 2rem;
+}
+
+.network-header h1 {
+    margin-bottom: 0.6rem;
+}
+
+.network-header p {
+    line-height: 1.8;
+}
+
+.network-index,
+.network-keywords,
+.network-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.network-index {
+    margin: 1.25rem 0 0;
+    line-height: 1.7;
+}
+
+.network-group {
+    max-width: 64rem;
+    padding: 2rem 0;
+    border-top: 1px solid #d6dde3;
+    scroll-margin-top: 5rem;
+}
+
+.network-group h2 {
+    margin: 0 0 1rem;
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+.network-keywords {
+    gap: 0.4rem;
+    margin: 0 0 1.25rem;
+}
+
+.network-keywords li {
+    padding: 0.25rem 0.65rem;
+    border: 1px solid #d6dde3;
+    border-radius: 0.3rem;
+    background: #f4f6f8;
+    color: #35495e;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.network-person h3,
+.network-contact-name {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.network-person h3 {
+    margin: 0 0 0.35rem;
+}
+
+.network-person + .network-contact {
+    margin-top: 10px;
+}
+
+.network-affiliation {
+    color: #526271;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.network-links {
+    margin: 0.75rem 0 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.research-network-page main a {
+    color: #244e73;
+    text-underline-offset: 0.15em;
+}
+
+.network-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.25rem 2.5rem;
+    margin: 0;
+}
+
+.network-details dt {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #35495e;
+    line-height: 1.5;
+}
+
+.network-details dd {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.network-details dd p + p {
+    margin-top: 0.75rem;
+}
+
 @media (max-width: 768px) {
     .research-layout {
         grid-template-columns: minmax(0, 1fr);
@@ -424,16 +542,27 @@ nav ul li a {
 
     .current-research-page main,
     .previous-research-page main,
-    .hypothesis-page main {
+    .hypothesis-page main,
+    .research-network-page main {
         box-sizing: border-box;
         padding-bottom: 5rem;
     }
 
     .current-research-page footer p,
     .previous-research-page footer p,
-    .hypothesis-page footer p {
+    .hypothesis-page footer p,
+    .research-network-page footer p {
         font-size: 0.8rem;
         line-height: 1.5;
+    }
+
+    .network-group {
+        padding: 1.5rem 0;
+        scroll-margin-top: 1rem;
+    }
+
+    .network-details {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

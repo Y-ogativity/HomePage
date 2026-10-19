@@ -2,6 +2,12 @@
 const newsData = {
     "updates": [
         {
+            "date": "2026/10/19",
+            "ja": "ターコイズキリフィッシュのゲノムと繰り返し配列に関するプレプリント（bioRxiv）を業績欄に追加しました。",
+            "en": "Added our bioRxiv preprint on the African turquoise killifish genome and repetitive sequences to Publications.",
+            "url": "https://www.biorxiv.org/content/10.64898/2026.10.12.757905v1"
+        },
+        {
             "date": "2026/09/04",
             "ja": "日本動物学会第97回札幌大会で発表しました。",
             "en": "Presented at the 97th Annual Meeting of the Zoological Society of Japan (Sapporo)."
